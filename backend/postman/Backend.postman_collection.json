@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "8393ec26-7775-48e2-a6c4-cf4274a3ca19",
+		"name": "Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/services",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"This my service\",\r\n    \"img\":\"service-url\",\r\n    \"price\":\"1056\",\r\n    \"description\":\"This is service description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/service",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Hamza\",\r\n    \"email\":\"hamza@gmail.com\",\r\n    \"phone\":\"0591556850\",\r\n    \"location\":\"Saudi Arabia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/order/617bf34b2f8dca266a9a33c9",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order",
+						"617bf34b2f8dca266a9a33c9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/orders",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My Orders",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "arfinsadia990@gmail.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/my-orders",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"my-orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order by User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/order/617b94f80433cd3d2fcff823",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order",
+						"617b94f80433cd3d2fcff823"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order by User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/order/617eba1efd9486de13ab1983",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order",
+						"617eba1efd9486de13ab1983"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
